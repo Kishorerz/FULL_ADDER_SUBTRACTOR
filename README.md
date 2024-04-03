@@ -39,21 +39,20 @@ Borrow out = A'Bin + A'B + BBin
 *Truthtable*
 
 *Procedure*
-
-Write the detailed procedure here
-
+1.Type the program in Quartus software.
+2.Compile and run the program.
+3.Generate the RTL schematic and save the logic diagram.
+4.Create nodes for inputs and outputs to generate the timing diagram.
+5.For different input combinations generate the timing diagram.
 *Program:*
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
 Developed by: KISHOR KUMAR B.
-
-RegisterNumber: 212223240072
+RegisterNumber:212223240072
 */
+## Full Adder
 
-*FULL_ADDER*
-
-module full_adder(a,b,cin,sum,carry);
+module fulladder(a,b,cin,sum,carry);
 input a,b,cin;
 output sum,carry;
 wire w1,w2,w3,w4;       
@@ -67,36 +66,21 @@ and(w4,cin,a);
 or(carry,w2,w3,w4);
 endmodule
 
+## Full Subtractor
 
-*FULL_SUBTRACTER*
-
-module full_subtracter(a,b,Bin,BO,DIFF);
+module fullsub(a,b,Bin,BO,DIFF);
 input a,b,Bin;
 output BO,DIFF;
 assign DIFF = a ^ b ^ Bin;
   assign BO = (a & b) | ((a ^ b) & Bin);
 endmodule
 
-
 *RTL Schematic*
-
-*Full_adder*
-
-<img width="781" alt="full_adder circuit dia" src="https://github.com/Ganesh23013987/FULL_ADDER_SUBTRACTOR/assets/147473768/5371de9d-9d9d-4c53-943c-18efc64b94fc">
-
-*Full_subtracter*
-
-<img width="838" alt="full_subtracter circuit dia" src="https://github.com/Ganesh23013987/FULL_ADDER_SUBTRACTOR/assets/147473768/6d6be52a-5b94-4543-b328-61f9e54a7066">
-
-
+![Screenshot 2024-03-22 143255](https://github.com/Yogesh-Yogi-1/FULL_ADDER_SUBTRACTOR/assets/148514598/939151e8-c37b-49aa-8f44-513492ba509e)
+![Screenshot 2024-03-22 143433](https://github.com/Yogesh-Yogi-1/FULL_ADDER_SUBTRACTOR/assets/148514598/aa118976-fe63-40e9-a31c-cec66367d805)
 *Output Timing Waveform*
-
-*Full_adder*
-![full_adder](https://github.com/Ganesh23013987/FULL_ADDER_SUBTRACTOR/assets/147473768/bdf5de18-56e3-4b73-ab12-54b2b3f15a2a)
-
-*Full_subtracter*
-![full_subtracter](https://github.com/Ganesh23013987/FULL_ADDER_SUBTRACTOR/assets/147473768/8985020f-0871-4143-84a2-b143a03f37aa)
-
+![Screenshot 2024-03-18 090939](https://github.com/Yogesh-Yogi-1/FULL_ADDER_SUBTRACTOR/assets/148514598/fe08e008-070e-4e8b-bee9-f26ade621c0e)
+![Screenshot 2024-03-18 092119](https://github.com/Yogesh-Yogi-1/FULL_ADDER_SUBTRACTOR/assets/148514598/c37c43ae-514e-4fda-82d9-22ed613851e0)
 *Result:*
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
